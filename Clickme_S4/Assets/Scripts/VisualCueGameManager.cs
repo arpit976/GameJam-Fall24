@@ -7,11 +7,11 @@ public class VisualCueGameManager : MonoBehaviour
 {
     public static VisualCueGameManager instance;
     public Color color;
+    public Word SelectedWord { get; private set; }
 
     [SerializeField] private List<LetterSO> letters;
     private LetterSO selectedLetterSO;
     [SerializeField] private List<Word> words;
-    private Word selectedWord;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +19,35 @@ public class VisualCueGameManager : MonoBehaviour
         selectedLetterSO = letters[0];
         if (instance == null)
             instance = this;
-        
+        SetWord();
 
+    }
+
+    public void RemoveSelectedWord()
+    {
+        SelectedWord.gameObject.SetActive(false);
+        SelectedWord = null;
+    }
+
+    private void SetWord()
+    {
+        for (int i = 0; i < selectedLetterSO.words.Count; i++)
+        {
+            words[i].SetWordData(selectedLetterSO.words[i]);
+            words[i].OnClick(SetSelectedWord);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SetSelectedWord(Word word)
     {
-        selectedWord?.ChangeBGColor(color);
-        selectedWord = word;
-        selectedWord.ChangeBGColor(Color.green);
+        SelectedWord?.ChangeBGColor(color);
+        SelectedWord = word;
+        SelectedWord.ChangeBGColor(Color.green);
     }
 }
