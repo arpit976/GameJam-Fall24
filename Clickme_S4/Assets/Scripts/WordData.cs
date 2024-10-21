@@ -8,4 +8,5 @@ public class WordData
 {
     public string word;
     public Color color;
+    public bool iSWord;
 }

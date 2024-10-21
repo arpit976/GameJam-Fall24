@@ -10,5 +10,4 @@ public class LetterSO : ScriptableObject
     public Color color;
     public List<string> letterNames;
     public List<WordData> words;
-    public List<WordData> nonWords;
 }

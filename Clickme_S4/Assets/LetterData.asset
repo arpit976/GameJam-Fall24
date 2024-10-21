@@ -21,14 +21,29 @@ MonoBehaviour:
   words:
   - word: DEN
     color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 1
   - word: END
     color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 1
   - word: NED
     color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 1
+  - word: DNE
+    color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 0
+  - word: EDN
+    color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 0
+  - word: NDE
+    color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 0
   nonWords:
   - word: DNE
     color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 0
   - word: EDN
     color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 0
   - word: NDE
     color: {r: 0, g: 0, b: 0, a: 0}
+    iSWord: 0
