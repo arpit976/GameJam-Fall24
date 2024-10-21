@@ -49,5 +49,6 @@ public class VisualCueGameManager : MonoBehaviour
         SelectedWord?.ChangeBGColor(color);
         SelectedWord = word;
         SelectedWord.ChangeBGColor(Color.green);
+        selectedWord.playAudio(word.sounds);
     }
 }
