@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Clickme UI.unity
+- path: Assets/Scenes/Clickme UI 1 word.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
